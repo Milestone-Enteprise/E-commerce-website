@@ -1,0 +1,138 @@
+/* ===== Base page styling ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ===== Main container ===== */
+.order-container {
+  margin-top :4%;
+  background: #af3838;
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== Left section - order items ===== */
+.order-left {
+  flex: 2;
+}
+
+.order-left h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* ===== Order items section ===== */
+.order-items {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/* ===== Individual order item ===== */
+.order-item {
+  background: #fafafa;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.order-item:hover {
+  transform: scale(1.02);
+}
+
+.order-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.item-details p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #2c7a7b;
+}
+
+/* ===== Delivery status tag per product ===== */
+.delivery-status {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffb703;
+  color: #333;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .order-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .order-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-price {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Photon Merchants</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #333;
+}
+
+.cart-items {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.cart-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-details {
+    flex-grow: 1;
+}
+
+.cart-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-price {
+    color: #666;
+    margin-top: 5px;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    padding: 6px 12px;
+    background: #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.qty-number {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.remove-btn {
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Summary Section */
+.cart-summary {
+    margin-top: 25px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: #008037;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.checkout-btn:hover {
+    background: #00692d;
+}
+
+</style>
+<body>
+    <div class="cart-container">
+
+        <h1 class="cart-title">Your Cart</h1>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+
+        <div class="cart-summary">
+            <h2>Summary</h2>
+
+            <div class="summary-row">
+                <span>Total Items</span>
+                <span id="total-items">0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Total Cost</span>
+                <span id="total-cost">Ksh 0</span>
+            </div>
+
+            <button id="checkout-btn" class="checkout-btn">
+                Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
+    <script type="module" src="cartPage.js"></script>
+</body>
+</html>
